@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Chalo — Heeya Kapadia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:#FAF9F6;color:#204654;font-family:'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:#204654;text-decoration:none}
+a:hover{color:#2F7A45}
+::selection{background:#2F7A45;color:#FAF9F6}
+:focus-visible{outline:2px solid #2F7A45;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+<script src="js/site.js"></script>
+</helmet>
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:12px;padding:12px clamp(16px,4vw,48px);background:#FAF9F6;border-bottom:1px solid rgba(32,70,84,.12)">
+  <a href="index.html" data-transition data-hide-narrow style="display:flex;align-items:baseline;gap:10px;min-width:0;white-space:nowrap;overflow:hidden">
+    <span style="font-size:16px;font-weight:500;color:#204654">Heeya Kapadia</span><span style="font-size:14px;color:#4C6873">/ Chalo</span>
+  </a>
+  <div data-pill data-pill-static="work" style="grid-column:2;display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(32,70,84,.07);border:1px solid rgba(32,70,84,.1)">
+    <a href="index.html" data-transition data-pill-link="top" style="padding:8px 16px;border-radius:999px;font-size:14px;color:#4C6873;transition:background .25s,color .25s,box-shadow .25s">Home</a>
+    <a href="index.html#work" data-transition data-pill-link="work" style="padding:8px 16px;border-radius:999px;font-size:14px;color:#4C6873;transition:background .25s,color .25s,box-shadow .25s">Work</a>
+    <a href="index.html#about" data-transition data-pill-link="about" style="padding:8px 16px;border-radius:999px;font-size:14px;color:#4C6873;transition:background .25s,color .25s,box-shadow .25s">About</a>
+  </div>
+  <a href="index.html#contact" data-transition data-hover-root style="grid-column:3;justify-self:end;display:flex;align-items:center;gap:12px;padding:4px 4px 4px 18px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(32,70,84,.14);font-size:15px;font-weight:600;color:#204654;white-space:nowrap">Get in touch<span data-hover="transform:translateX(2px) rotate(-45deg)" style="width:34px;height:34px;border-radius:50%;background:#2F7A45;color:#FAF9F6;display:flex;align-items:center;justify-content:center;line-height:1;transition:transform .3s cubic-bezier(.2,.7,.2,1)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+</nav>
+
+<aside data-rail style="position:fixed;right:10px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:0;color:#6F8B94">
+  <a href="#intro" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">Intro</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+  <a href="#problem" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">Problem</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+  <a href="#research" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">Research</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+  <a href="#insight" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">Insight</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+  <a href="#core" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">Core problems</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+  <a href="#ideation" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">Ideation</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+  <a href="#flow" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">The flow</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+  <a href="#ia" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">IA</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+  <a href="#outcomes" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">Outcomes</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+  <a href="#reflection" data-spy style="display:flex;align-items:center;opacity:.5;font-size:11px;letter-spacing:.1em;text-transform:uppercase"><span data-spy-label style="opacity:0;transition:opacity .3s;background:#FAF9F6;color:#204654;padding:3px 8px;margin-right:4px">Reflection</span><span style="display:flex;justify-content:flex-end;width:28px;padding:6px 6px"><span data-spy-mark style="width:12px;height:2px;background:currentColor;transition:width .3s,background .3s"></span></span></a>
+</aside>
+
+<!-- 01 INTRO -->
+<header id="intro" data-screen-label="Intro" style="position:relative;min-height:100vh;box-sizing:border-box;background:#FAF9F6;color:#204654;padding:clamp(96px,13vh,130px) clamp(16px,4vw,48px) 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(24px,4vw,64px);align-items:center;overflow:hidden">
+  <div style="display:flex;flex-direction:column;gap:clamp(16px,2.4vw,28px);position:relative;z-index:2">
+    <div data-reveal="fade" style="display:flex;gap:20px;flex-wrap:wrap;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#4C6873;font-weight:500">
+      <span>Project - 1</span><span>UX Case Study</span><span>Mobile Application.</span>
+    </div>
+    <h1 data-reveal="up" data-delay="80" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(120px,20vw,300px);line-height:.82;letter-spacing:-.03em;font-weight:600">Chalo.</h1>
+    <div data-reveal="clip" data-delay="400" style="font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;overflow-wrap:break-word;font-size:clamp(28px,3.4vw,52px);line-height:.95;color:#2A6B3D;font-weight:600">Plan smarter. Travel easier.</div>
+    <p data-reveal="up" data-delay="260" style="margin:0;max-width:30ch;font-size:clamp(19px,1.8vw,24px);line-height:1.4;font-weight:400;color:#204654;text-wrap:pretty">A guided journey planner for Pune public transport</p>
+  </div>
+  <div data-reveal="scale" data-delay="200" style="position:relative;aspect-ratio:1829/1344;width:100%">
+    <img src="images/chalo-hero.webp" alt="Chalo app screens" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 84%,transparent 100%)">
+  </div>
+  <a href="#story" style="position:absolute;left:clamp(16px,4vw,48px);bottom:24px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#204654;display:flex;gap:10px;align-items:center" style-hover="color:#2A6B3D">Scroll <span>↓</span></a>
+</header>
+
+<!-- STORY -->
+<section id="story" data-screen-label="Story" style="background:#204654;color:#FAF9F6;padding:clamp(68px,10.5vw,135px) clamp(16px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(32px,5vw,80px);align-items:end">
+  <div data-reveal="up" style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(110px,17vw,260px);line-height:.85;color:#CAFFA6;font-weight:600">8:45 am.</div>
+  <div style="display:flex;flex-direction:column;gap:28px;max-width:560px">
+    <p data-reveal="up" data-delay="100" style="margin:0;font-size:clamp(21px,2vw,28px);line-height:1.4;font-weight:300;text-wrap:pretty">Person A needs to get from Savannah to Tea Villa Café. Google Maps says 43 minutes, three modes, and one interchange she has never used.</p>
+    <p data-reveal="up" data-delay="200" style="margin:0;font-size:clamp(21px,2vw,28px);line-height:1.4;font-weight:500;color:#CAFFA6;text-wrap:pretty">She has the metro app on her phone. She doesn’t open it.</p>
+    <div data-reveal="up" data-delay="300" style="display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:8px">
+      <span style="font-size:15px;color:#D5E3E4;padding-right:18px;border-right:1px solid rgba(250,249,246,.25)">Savannah → Tea Villa Café</span>
+      <span style="font-size:15px;color:#D5E3E4;padding-right:18px;border-right:1px solid rgba(250,249,246,.25)">43 minutes</span>
+      <span style="font-size:15px;color:#D5E3E4;padding-right:18px;border-right:1px solid rgba(250,249,246,.25)">₹60</span>
+      <span style="font-size:15px;color:#CAFFA6">Walk + Metro + Auto</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 PROBLEM -->
+<section id="problem" data-screen-label="Problem" style="position:relative;padding:clamp(68px,9vw,120px) clamp(16px,4vw,48px) clamp(68px,9vw,120px)">
+  <div style="grid-column:1/-1;display:flex;align-items:center;gap:14px;margin-bottom:clamp(28px,4vw,52px);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#4C6873"><span style="color:#2A6B3D">02</span><span style="width:40px;height:1px;background:currentColor"></span><span>The Problem</span></div>
+  <h2 data-reveal="up" style="margin:0 0 clamp(40px,6vw,80px);font-size:clamp(36px,4.4vw,64px);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.05">Person A isn’t unusual.</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(40px,6vw,96px);border-top:1px solid #204654;padding-top:32px">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div data-reveal="up" style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(88px,11vw,170px);line-height:.9;color:#2F7A45;font-weight:600"><span data-count="74.4" data-decimals="1">74.4</span>%</div>
+      <div style="height:8px;background:#E7E6E1;position:relative;overflow:hidden"><span data-reveal="bar" style="position:absolute;left:0;top:0;bottom:0;width:74.4%;background:#2F7A45"></span></div>
+      <p data-reveal="up" style="margin:0;font-size:clamp(19px,1.7vw,23px);line-height:1.4;font-weight:500;max-width:30ch">of Pune commuters plan their journeys in Google Maps instead of the official metro app.</p>
+      <p data-reveal="up" data-delay="80" style="margin:0;font-size:16px;line-height:1.6;color:#4C6873;max-width:46ch">The transport authority’s own product has already lost the planning moment. Whatever gets built has to win it back at the point where the trip is decided, not after the rider is on a platform.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div data-reveal="up" data-delay="120" style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(88px,11vw,170px);line-height:.9;color:#2F7A45;font-weight:600"><span data-count="51.2" data-decimals="1">51.2</span>%</div>
+      <div style="height:8px;background:#E7E6E1;position:relative;overflow:hidden"><span data-reveal="bar" data-delay="120" style="position:absolute;left:0;top:0;bottom:0;width:51.2%;background:#2F7A45"></span></div>
+      <p data-reveal="up" style="margin:0;font-size:clamp(19px,1.7vw,23px);line-height:1.4;font-weight:500;max-width:30ch">avoid the metro entirely because stations are too far from where they are actually going.</p>
+      <p data-reveal="up" data-delay="80" style="margin:0;font-size:16px;line-height:1.6;color:#4C6873;max-width:46ch">This is not a metro problem. It is a first-and-last-mile problem that the metro app never had a way to answer, so half the potential riders never got on.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 RESEARCH -->
+<section id="research" data-screen-label="Research" style="position:relative;background:#FAF9F6;padding:clamp(68px,9vw,120px) clamp(16px,4vw,48px) clamp(68px,9vw,120px);display:flex;flex-direction:column;gap:clamp(60px,7.5vw,105px)">
+  <div style="grid-column:1/-1;display:flex;align-items:center;gap:14px;margin-bottom:clamp(28px,4vw,52px);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#4C6873"><span style="color:#2A6B3D">03</span><span style="width:40px;height:1px;background:currentColor"></span><span>Research</span></div>
+  <div style="display:flex;flex-direction:column;gap:clamp(32px,4vw,56px)">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:760px">
+      <h2 data-reveal="up" style="margin:0;font-size:clamp(36px,4.4vw,64px);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.05">Where the city is losing riders</h2>
+      <p data-reveal="up" data-delay="80" style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:#4C6873;text-wrap:pretty">I started with desk research, expecting a usability problem. What I found was a geography and cost problem that no interface had been asked to solve.</p>
+    </div>
+    <div data-reveal="up" style="display:flex;flex-wrap:wrap;gap:1px;background:#204654;border-top:1px solid #204654;border-bottom:1px solid #204654">
+      <div style="flex:1 1 280px;min-width:0;box-sizing:border-box;background:#FAF9F6;padding:28px 24px 28px 0;display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:12px;letter-spacing:.3em;color:#2A6B3D;font-weight:500">DISTANCE</span>
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(52px,5.6vw,84px);line-height:.95;font-weight:600">30–45 min</span>
+        <div style="display:flex;align-items:center;gap:0;margin:6px 0">
+          <span style="width:12px;height:12px;border-radius:50%;background:#204654;flex-shrink:0"></span>
+          <span data-reveal="bar" data-delay="200" style="flex:1;height:2px;background:repeating-linear-gradient(90deg,#2F7A45 0 8px,transparent 8px 14px)"></span>
+          <span style="width:12px;height:12px;border:2px solid #2F7A45;box-sizing:border-box;border-radius:50%;flex-shrink:0"></span>
+        </div>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#2E5260">Some destinations sit that far from the nearest metro station, requiring an additional rickshaw or bus ride.</p>
+        <p style="margin:0;font-size:16px;line-height:1.5;font-weight:500;color:#2A6B3D">So the metro is never the whole trip.</p>
+      </div>
+      <div style="flex:1 1 280px;min-width:0;box-sizing:border-box;background:#FAF9F6;padding:28px 24px;display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:12px;letter-spacing:.3em;color:#2A6B3D;font-weight:500">COST</span>
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(52px,5.6vw,84px);line-height:.95;font-weight:600">10–15%</span>
+        <div style="height:12px;background:#DFDED8;position:relative;margin:6px 0"><span data-reveal="bar" data-delay="300" style="position:absolute;left:0;top:0;bottom:0;width:10%;background:#2F7A45"></span><span data-reveal="bar" data-delay="500" style="position:absolute;left:10%;top:0;bottom:0;width:5%;background:repeating-linear-gradient(45deg,#2F7A45 0 3px,transparent 3px 6px)"></span></div>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#2E5260">of monthly budget is what transport costs reach, pushing lower-income commuters away from metro-plus-auto combinations entirely.</p>
+        <p style="margin:0;font-size:16px;line-height:1.5;font-weight:500;color:#2A6B3D">So the extra leg has to be priced, not hidden.</p>
+      </div>
+      <div style="flex:1 1 280px;min-width:0;box-sizing:border-box;background:#FAF9F6;padding:28px 0 28px 24px;display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:12px;letter-spacing:.3em;color:#2A6B3D;font-weight:500">RESULT</span>
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(52px,5.6vw,84px);line-height:.95;font-weight:600">1.55–2.5 L</span>
+        <div style="display:flex;flex-direction:column;gap:6px;margin:6px 0">
+          <div style="height:12px;background:#DFDED8;position:relative"><span data-reveal="bar" data-delay="400" style="position:absolute;left:0;top:0;bottom:0;width:25.8%;background:#2F7A45"></span><span data-reveal="bar" data-delay="600" style="position:absolute;left:25.8%;top:0;bottom:0;width:15.9%;background:repeating-linear-gradient(45deg,#2F7A45 0 3px,transparent 3px 6px)"></span></div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:#4C6873"><span>0</span><span>6 lakh target</span></div>
+        </div>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#2E5260">daily riders, against a projected target of 6 lakh.</p>
+        <p style="margin:0;font-size:16px;line-height:1.5;font-weight:500;color:#2A6B3D">A system built for three times the ridership it has.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <h2 data-reveal="up" style="margin:0;font-size:clamp(36px,4.4vw,64px);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.05">So I asked riders what stops them</h2>
+      <p data-reveal="up" style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:#4C6873">A survey of Pune commuters. I expected distance to dominate. It came second.</p>
+      <div data-reveal="up" style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px 20px;align-items:baseline;padding-top:12px;border-top:1px solid #204654">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:44px;color:#2F7A45;font-weight:600"><span data-count="62.8" data-decimals="1">62.8</span>%</span>
+        <span style="font-size:16px;line-height:1.55">use the metro only sometimes. It exists in their mental map, but it has not become the default way to move.</span>
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:44px;color:#2F7A45;font-weight:600"><span data-count="51.2" data-decimals="1">51.2</span>%</span>
+        <span style="font-size:16px;line-height:1.55">avoid it because stations are too far from their final destination — the desk research, confirmed by the people living it.</span>
+      </div>
+      <p data-reveal="up" style="margin:0;font-size:16px;line-height:1.6;color:#4C6873;max-width:52ch">Riders described unclear interchanges, unfamiliar routes and last-mile connectivity as the points where they stop trusting the plan — and start asking other passengers for help.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:22px;background:#204654;color:#FAF9F6;padding:clamp(24px,3vw,40px)" data-reveal="up" data-delay="100">
+      <span style="font-size:12px;letter-spacing:.3em;color:#CAFFA6;font-weight:500">BIGGEST BARRIER REPORTED</span>
+      <div style="display:flex;flex-direction:column;gap:8px;cursor:default">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span data-hover="color:#CAFFA6" style="font-size:16px;transition:color .3s">Confusion in a new city’s public transport</span><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:40px;color:#CAFFA6;font-weight:600"><span data-count="44">44</span>%</span></div>
+        <div style="height:10px;background:#2B5563"><span data-reveal="bar" data-delay="200" data-hover="background:#FAF9F6" style="display:block;height:100%;width:44%;background:#CAFFA6;transition:background .3s"></span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;cursor:default">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span data-hover="color:#CAFFA6" style="font-size:16px;transition:color .3s">Distance to the nearest station</span><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:40px;font-weight:600"><span data-count="30">30</span>%</span></div>
+        <div style="height:10px;background:#2B5563"><span data-reveal="bar" data-delay="320" data-hover="background:#CAFFA6" style="display:block;height:100%;width:30%;background:#FAF9F6;transition:background .3s"></span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;cursor:default">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span data-hover="color:#CAFFA6" style="font-size:16px;transition:color .3s">No awareness of timings or schedules</span><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:40px;font-weight:600"><span data-count="14">14</span>%</span></div>
+        <div style="height:10px;background:#2B5563"><span data-reveal="bar" data-delay="440" data-hover="background:#CAFFA6" style="display:block;height:100%;width:14%;background:#FAF9F6;transition:background .3s"></span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;cursor:default">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span data-hover="color:#CAFFA6" style="font-size:16px;transition:color .3s">Confusing routes and interchanges</span><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:40px;font-weight:600"><span data-count="12">12</span>%</span></div>
+        <div style="height:10px;background:#2B5563"><span data-reveal="bar" data-delay="560" data-hover="background:#CAFFA6" style="display:block;height:100%;width:12%;background:#FAF9F6;transition:background .3s"></span></div>
+      </div>
+      <p style="margin:8px 0 0;font-size:17px;line-height:1.5;border-top:1px solid #2E5968;padding-top:18px;text-wrap:pretty">Distance is the barrier people can name. <span style="color:#CAFFA6">Not knowing how the system works is the barrier that actually keeps them off it.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 INSIGHT -->
+<section id="insight" data-screen-label="Insight" style="position:relative;height:240vh;background:#204654;color:#FAF9F6">
+  <div style="position:sticky;top:0;min-height:100vh;box-sizing:border-box;padding:clamp(90px,12vh,120px) clamp(16px,5vw,72px) 40px;display:flex;flex-direction:column;justify-content:center;gap:clamp(24px,4vh,48px)">
+    <span style="font-size:13px;letter-spacing:.3em;color:#FAF9F6;font-weight:500">THE INSIGHT</span>
+    <p style="margin:0;font-size:clamp(44px,7.4vw,128px);line-height:1.02;font-weight:700;letter-spacing:-.025em;max-width:14ch;display:flex;flex-wrap:wrap;column-gap:.24em">
+      <sc-for list="{{ insightWords }}" as="w" hint-placeholder-count="14"><span data-w="{{ $index }}" style="color:{{ w.c }};opacity:.18;transition:opacity .25s">{{ w.t }}</span></sc-for>
+    </p>
+    <p id="insight-sub" style="margin:0;max-width:52ch;font-size:clamp(18px,1.6vw,22px);line-height:1.5;color:#FAF9F6;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .8s cubic-bezier(.2,.7,.2,1)">Getting to the station. Reading an interchange. Finding an auto at the other end. The ride itself was never the hard part.</p>
+    <span style="margin-top:clamp(8px,2vh,24px);font-size:13px;letter-spacing:.3em;color:#FAF9F6">CHALO</span>
+  </div>
+</section>
+
+<!-- 05 CORE PROBLEMS -->
+<section id="core" data-screen-label="Core problems" style="position:relative;padding:clamp(68px,9vw,120px) clamp(16px,4vw,48px) clamp(68px,9vw,120px)">
+  <div style="grid-column:1/-1;display:flex;align-items:center;gap:14px;margin-bottom:clamp(28px,4vw,52px);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#4C6873"><span style="color:#2A6B3D">05</span><span style="width:40px;height:1px;background:currentColor"></span><span>Core Problems</span></div>
+  <div style="display:flex;flex-direction:column;gap:14px;max-width:760px;margin-bottom:clamp(40px,6vw,72px)">
+    <h2 data-reveal="up" style="margin:0;font-size:clamp(36px,4.4vw,64px);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.05">Three edges to fix</h2>
+    <p data-reveal="up" data-delay="80" style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:#4C6873">Affinity mapping the research produced eleven overlapping themes. Stripped of synonyms, three remained.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(24px,3vw,48px)">
+    <div data-reveal="up" style="display:flex;flex-direction:column;gap:16px;border-top:2px solid #204654;padding-top:22px">
+      <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(88px,10vw,150px);line-height:.8;color:transparent;-webkit-text-stroke:1.5px #204654;transition:color .4s,-webkit-text-stroke-color .4s;font-weight:600">01</span>
+      <h3 style="margin:0;font-size:26px;font-family:'Bricolage Grotesque',sans-serif;font-weight:600">Not knowing the route</h3>
+      <p style="margin:0;font-size:16px;line-height:1.55">44% named new-city confusion as their single biggest barrier, and 62.8% ride only sometimes.</p>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:#4C6873"><span style="color:#2A6B3D;font-weight:500">Cost to the rider:</span> the trip gets planned in another app, or not by public transport at all.</p>
+    </div>
+    <div data-reveal="up" data-delay="100" style="display:flex;flex-direction:column;gap:16px;border-top:2px solid #204654;padding-top:22px;margin-top:clamp(0px,5vw,72px)">
+      <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(88px,10vw,150px);line-height:.8;color:transparent;-webkit-text-stroke:1.5px #204654;transition:color .4s,-webkit-text-stroke-color .4s;font-weight:600">02</span>
+      <h3 style="margin:0;font-size:26px;font-family:'Bricolage Grotesque',sans-serif;font-weight:600">Last-mile blindness</h3>
+      <p style="margin:0;font-size:16px;line-height:1.55">51.2% avoid the metro over station distance; some destinations are 30–45 minutes past the last stop.</p>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:#4C6873"><span style="color:#2A6B3D;font-weight:500">Cost to the rider:</span> an unplanned, unpriced auto at the end of a journey that was supposed to be cheap.</p>
+    </div>
+    <div data-reveal="up" data-delay="200" style="display:flex;flex-direction:column;gap:16px;border-top:2px solid #204654;padding-top:22px;margin-top:clamp(0px,10vw,144px)">
+      <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(88px,10vw,150px);line-height:.8;color:transparent;-webkit-text-stroke:1.5px #204654;transition:color .4s,-webkit-text-stroke-color .4s;font-weight:600">03</span>
+      <h3 style="margin:0;font-size:26px;font-family:'Bricolage Grotesque',sans-serif;font-weight:600">No live feedback</h3>
+      <p style="margin:0;font-size:16px;line-height:1.55">14% cited having no awareness of timings or schedules once they were in the system.</p>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:#4C6873"><span style="color:#2A6B3D;font-weight:500">Cost to the rider:</span> the journey becomes dependent on asking other passengers for help.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 IDEATION -->
+<section id="ideation" data-screen-label="Ideation" style="position:relative;padding:clamp(27px,3.6vw,48px) clamp(16px,4vw,48px) clamp(68px,9vw,120px)">
+  <div style="grid-column:1/-1;display:flex;align-items:center;gap:14px;margin-bottom:clamp(28px,4vw,52px);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#4C6873"><span style="color:#2A6B3D">06</span><span style="width:40px;height:1px;background:currentColor"></span><span>Ideation</span></div>
+  <h2 data-reveal="up" style="margin:0 0 clamp(28px,4vw,48px);font-size:clamp(36px,4.4vw,64px);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.05">Three concepts, one right unit</h2>
+  <div style="display:flex;flex-direction:column;border-bottom:1px solid #C9C8C1">
+    <div data-reveal="up" data-delay="0" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px clamp(24px,4vw,64px);padding:clamp(24px,3vw,36px) 0;border-top:1px solid #C9C8C1">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:14px;align-items:baseline;font-size:12px;letter-spacing:.2em;font-weight:500"><span style="color:#4C6873">CONCEPT 01</span><span style="color:#4C6873">REJECTED</span></div>
+        <h3 style="margin:0;font-size:clamp(22px,2vw,28px);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:#4C6873">Step-by-step guide</h3>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:#2E5260;max-width:52ch">Plan metro and bus journeys step by step: best route, direction, platform, stops and total fare, with QR ticketing and auto or cab booking bolted on for the first and last mile.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:4px">
+        <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#4C6873;font-weight:500">Note</span>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:#4C6873;max-width:48ch"><strong style="color:#204654">Why not:</strong> strong once you have chosen a route, silent about whether public transport was the right call at all. It could not answer the 51.2% who had already written the metro off.</p>
+      </div>
+    </div>
+    <div data-reveal="up" data-delay="80" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px clamp(24px,4vw,64px);padding:clamp(28px,3.4vw,48px) clamp(20px,3vw,44px);margin:clamp(8px,1.4vw,20px) 0;background:#204654;color:#FAF9F6;border-radius:8px;border-left:6px solid #CAFFA6">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:14px;align-items:baseline;font-size:12px;letter-spacing:.2em;font-weight:500"><span style="color:#B7CDD2">CONCEPT 02</span><span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:#CAFFA6;color:#204654;font-weight:600;letter-spacing:.16em"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>SELECTED</span></div>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(44px,5.4vw,80px);line-height:.95;color:#FAF9F6;font-weight:600">Door-to-door planner</h3>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:#D5E3E4;max-width:52ch">A first-time-user-friendly planner covering metro, bus, auto and cab, ranking every available route by time, cost and savings against a direct cab, with step-by-step guidance, live tracking, ticketing, stop alerts and exit directions.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#CAFFA6;font-weight:500">Why I chose this</span>
+        <p style="margin:0;font-size:18px;line-height:1.55;color:#FAF9F6;max-width:48ch"><strong style="color:#CAFFA6">Why this one:</strong> it treats the door-to-door trip as the unit, which is the only shape that answers last-mile blindness. Ranking by cost gives the 44% who are new to the city a basis for judging options they have never used.</p>
+      </div>
+    </div>
+    <div data-reveal="up" data-delay="160" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px clamp(24px,4vw,64px);padding:clamp(24px,3vw,36px) 0;border-top:1px solid #C9C8C1">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:14px;align-items:baseline;font-size:12px;letter-spacing:.2em;font-weight:500"><span style="color:#4C6873">CONCEPT 03</span><span style="color:#4C6873">REJECTED</span></div>
+        <h3 style="margin:0;font-size:clamp(22px,2vw,28px);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:#4C6873">Minimal quick-search</h3>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:#2E5260;max-width:52ch">Search stations or areas fast, compare fares, book in a tap, with nearby landmarks, recent searches and saved trips making repeat travel quicker.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:4px">
+        <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#4C6873;font-weight:500">Note</span>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:#4C6873;max-width:48ch"><strong style="color:#204654">Why not:</strong> recents and saved trips are built for someone who already knows the network. That is the confident commuter, not the rider the research kept describing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 FLOW -->
+<section id="flow" data-screen-label="The Flow" style="position:relative;height:540vh;background:#FAF9F6">
+  <div style="position:sticky;top:0;height:100vh;box-sizing:border-box;padding:clamp(64px,9vh,100px) clamp(16px,4vw,48px) 12px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(14px,4vw,64px);align-items:center;overflow:hidden">
+    <div style="display:flex;flex-direction:column;gap:clamp(6px,1.6vh,26px);min-width:0">
+      <div style="font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;overflow-wrap:break-word;font-size:clamp(18px,3vh,40px);line-height:1;color:#2F7A45;font-weight:600">The Flow.</div>
+      <h2 style="margin:0;font-size:clamp(22px,min(3.6vw,5.4vh),54px);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.05">Person A’s 43 minutes</h2>
+      <p style="margin:0;font-size:clamp(13px,min(1.3vw,2.4vh),18px);line-height:1.4;color:#4C6873;max-width:50ch">The whole design brief, reduced to one trip: Savannah to Tea Villa Café, ₹60, no one to ask.</p>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500"><span>Savannah</span><span>Tea Villa Café</span></div>
+        <div style="position:relative;height:10px;display:flex;gap:3px">
+          <span style="flex:5;background:#DFDED8"></span><span style="flex:25;background:#DFDED8"></span><span style="flex:13;background:#DFDED8"></span>
+          <span id="flow-fill" style="position:absolute;left:0;top:0;bottom:0;width:0;background:#2F7A45"></span>
+          <span id="flow-dot" style="position:absolute;top:50%;left:0;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#204654;border:3px solid #FAF9F6;box-sizing:border-box"></span>
+        </div>
+        <div style="display:flex;gap:3px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#4C6873"><span style="flex:5;min-width:0">Walk</span><span style="flex:25;text-align:center">Metro</span><span style="flex:13;text-align:right">Auto</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
+          <div onClick="{{ s.go }}" style="display:grid;grid-template-columns:3px minmax(0,1fr);gap:14px;opacity:{{ s.op }};transition:opacity .4s;cursor:pointer">
+            <span style="background:{{ s.bar }};transition:background .4s"></span>
+            <div style="padding:clamp(3px,.9vh,7px) 0;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#2A6B3D;font-weight:500">{{ s.time }} · {{ s.tag }}</span>
+              <span style="font-size:clamp(15px,min(1.7vw,3.2vh),23px);font-weight:500;line-height:1.2">{{ s.title }}</span>
+              <span style="max-height:{{ s.maxH }};overflow:hidden;transition:max-height .5s;font-size:clamp(12px,min(1.2vw,2.3vh),16px);line-height:1.45;color:#4C6873">{{ s.body }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position:relative;justify-self:center;width:min(100%,calc(min(70vh,640px) * .4856));aspect-ratio:557/1147">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="1">
+        <img src="{{ s.img }}" alt="{{ s.title }}" data-lightbox data-caption="{{ s.title }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:{{ s.imgOp }};transform:{{ s.imgTf }};transition:opacity .6s,transform .8s cubic-bezier(.2,.7,.2,1);pointer-events:{{ s.pe }}">
+      </sc-for>
+      <span style="position:absolute;left:50%;bottom:-6px;transform:translate(-50%,100%);font-family:'Bricolage Grotesque',sans-serif;font-size:20px;white-space:nowrap;font-weight:600">{{ stepNo }} <span style="color:#8FA7AE">/ 05</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- 08 IA -->
+<section id="ia" data-screen-label="Information Architecture" style="position:relative;background:#F1F0EC;padding:clamp(68px,9vw,120px) clamp(16px,4vw,48px)">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:28px">
+    <h2 data-reveal="clip" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;overflow-wrap:break-word;font-size:clamp(40px,6.4vw,104px);line-height:.95;color:#2F7A45;font-weight:600">Information Architecture.</h2>
+  </div>
+  <div data-panzoom data-reveal="up" style="display:flex;flex-direction:column;gap:12px">
+    <div data-pz-view style="position:relative;height:min(78vh,720px);background:#FFFFFF;border:1px solid #204654">
+      <img data-pz-content src="images/chalo-ia.webp" alt="Chalo information architecture" width="2094" height="1808" style="user-select:none">
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <span style="font-size:13px;color:#4C6873">Drag to pan · pinch or ⌘/Ctrl + scroll to zoom</span>
+      <div style="display:flex;gap:8px">
+        <button type="button" data-pz-btn="out" title="Zoom out" style="width:44px;height:44px;border-radius:50%;border:1px solid #204654;background:transparent;font-size:20px;cursor:pointer;color:#204654" style-hover="background:#204654;color:#FAF9F6">−</button>
+        <button type="button" data-pz-btn="in" title="Zoom in" style="width:44px;height:44px;border-radius:50%;border:1px solid #204654;background:transparent;font-size:20px;cursor:pointer;color:#204654" style-hover="background:#204654;color:#FAF9F6">+</button>
+        <button type="button" data-pz-btn="fit" title="Fit" style="height:44px;padding:0 16px;border-radius:999px;border:1px solid #204654;background:transparent;font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;color:#204654" style-hover="background:#204654;color:#FAF9F6">Fit</button>
+        <button type="button" data-pz-btn="open" title="Open larger view" style="height:44px;padding:0 18px;border-radius:999px;border:1px solid #2F7A45;background:#2F7A45;color:#FAF9F6;font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer" style-hover="background:#204654;border-color:#204654">Open full view ↗</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 OUTCOMES -->
+<section id="outcomes" data-screen-label="Outcomes" style="background:#204654;color:#FAF9F6;padding:clamp(68px,9vw,120px) clamp(16px,4vw,48px);display:flex;flex-direction:column;gap:clamp(75px,10.5vw,150px)">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+    <h2 data-reveal="clip" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;overflow-wrap:break-word;font-size:clamp(52px,8.4vw,132px);line-height:.95;color:#CAFFA6;font-weight:600">Outcome.</h2>
+    <div data-reveal="fade" style="display:flex;gap:8px;flex-wrap:wrap">
+      <a href="#o1" style="padding:8px 14px;border:1px solid rgba(250,249,246,.35);border-radius:999px;font-size:13px;color:#FAF9F6" style-hover="border-color:#CAFFA6;color:#CAFFA6">01 Route Planning</a>
+      <a href="#o2" style="padding:8px 14px;border:1px solid rgba(250,249,246,.35);border-radius:999px;font-size:13px;color:#FAF9F6" style-hover="border-color:#CAFFA6;color:#CAFFA6">02 Live Navigation</a>
+      <a href="#o3" style="padding:8px 14px;border:1px solid rgba(250,249,246,.35);border-radius:999px;font-size:13px;color:#FAF9F6" style-hover="border-color:#CAFFA6;color:#CAFFA6">03 Ticket Booking</a>
+      <a href="#o4" style="padding:8px 14px;border:1px solid rgba(250,249,246,.35);border-radius:999px;font-size:13px;color:#FAF9F6" style-hover="border-color:#CAFFA6;color:#CAFFA6">04 Live Tracking</a>
+    </div>
+  </div>
+
+  <article id="o1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,96px);align-items:center;scroll-margin-top:80px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span data-reveal="fade" style="font-size:12px;letter-spacing:.24em;color:#CAFFA6;font-weight:500">EDGE 01 — NOT KNOWING THE ROUTE</span>
+      <h3 data-reveal="up" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(56px,7vw,110px);line-height:.9;font-weight:600">Route Planning</h3>
+      <p data-reveal="up" style="margin:0;font-size:clamp(18px,1.6vw,21px);line-height:1.5;font-weight:300;max-width:46ch">Person A types two places. They gets three whole journeys, not three metro lines, each priced end to end and ranked against the cab she would otherwise take.</p>
+      <p data-reveal="up" style="margin:0;font-size:16px;line-height:1.6;color:#D5E3E4;max-width:52ch;"><span style="display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#CAFFA6;margin-bottom:8px;font-weight:500">Why I chose this</span><strong style="color:#FAF9F6">The decision:</strong> I put the savings chip on the card, not in the detail view. Transport reaching 10–15% of monthly budget is why people stop considering multi-modal at all, so the number that answers that objection has to be visible before anyone taps.</p>
+      <p data-reveal="up" style="margin:0;font-size:16px;line-height:1.6;color:#D5E3E4;max-width:52ch">The top card is labelled Best Pick rather than just placed first. Someone new to the city has no basis to read an ordered list.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:18px clamp(12px,2vw,28px);justify-content:center;align-items:flex-start">
+      <div data-reveal="up" style="width:min(46%,280px)"><img src="images/screens/route-1.webp" alt="Route Planning — suggested routes" data-lightbox data-caption="Route Planning — suggested routes" loading="lazy" style="display:block;width:100%;height:auto;filter:drop-shadow(0 16px 20px rgba(0,0,0,.3))"></div>
+      <div style="width:min(46%,280px);margin-top:clamp(40px,8vw,120px)"><div><div data-reveal="up" data-delay="120"><img src="images/screens/route-2.webp" alt="Route Planning — your journey" data-lightbox data-caption="Route Planning — your journey, step by step" loading="lazy" style="display:block;width:100%;height:auto;filter:drop-shadow(0 16px 20px rgba(0,0,0,.3))"></div></div></div>
+      <p style="flex-basis:100%;margin:0;font-size:13px;line-height:1.5;color:#B7CDD2;max-width:44ch">Route planning — three whole journeys, each priced end to end and ranked against the cab.</p>
+    </div>
+  </article>
+
+  <article id="o2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,96px);align-items:center;scroll-margin-top:80px">
+    <div style="display:flex;flex-wrap:wrap;gap:18px clamp(12px,2vw,28px);justify-content:center;align-items:flex-start">
+      <div data-reveal="up" style="width:min(46%,280px)"><img src="images/screens/nav-1.webp" alt="Live Navigation — ticket prompt" data-lightbox data-caption="Live Navigation — 3 mins away, book your ticket" loading="lazy" style="display:block;width:100%;height:auto;filter:drop-shadow(0 16px 20px rgba(0,0,0,.3))"></div>
+      <div style="width:min(46%,280px);margin-top:clamp(40px,8vw,120px)"><div><div data-reveal="up" data-delay="120"><img src="images/screens/nav-2.webp" alt="Live Navigation — walk over" data-lightbox data-caption="Live Navigation — walk over, get your e-ticket" loading="lazy" style="display:block;width:100%;height:auto;filter:drop-shadow(0 16px 20px rgba(0,0,0,.3))"></div></div></div>
+      <p style="flex-basis:100%;margin:0;font-size:13px;line-height:1.5;color:#B7CDD2;max-width:44ch">Live navigation — the ticket prompt fires three minutes before arrival.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span data-reveal="fade" style="font-size:12px;letter-spacing:.24em;color:#CAFFA6;font-weight:500">EDGE 02 — THE WALK TO THE STATION</span>
+      <h3 data-reveal="up" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(56px,7vw,110px);line-height:.9;font-weight:600">Live Navigation</h3>
+      <p data-reveal="up" style="margin:0;font-size:clamp(18px,1.6vw,21px);line-height:1.5;font-weight:300;max-width:46ch">Turn-by-turn to the station entrance, with the incoming metro named on the same card as the distance left to walk.</p>
+      <p data-reveal="up" style="margin:0;font-size:16px;line-height:1.6;color:#D5E3E4;max-width:52ch;"><span style="display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#CAFFA6;margin-bottom:8px;font-weight:500">Why I chose this</span><strong style="color:#FAF9F6">The decision:</strong> The ticket prompt fires three minutes before arrival. Earlier felt like nagging; later felt rushed. Three minutes is long enough to pay while walking and short enough that the train is real.</p>
+      <p data-reveal="up" style="margin:0;font-size:16px;line-height:1.6;color:#D5E3E4;max-width:52ch">The confirmation lands as the walk ends, so Jia reaches the gate already holding a QR code.</p>
+    </div>
+  </article>
+
+  <article id="o3" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,96px);align-items:center;scroll-margin-top:80px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span data-reveal="fade" style="font-size:12px;letter-spacing:.24em;color:#CAFFA6;font-weight:500">EDGE 03 — THE QUEUE AT THE GATE</span>
+      <h3 data-reveal="up" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(56px,7vw,110px);line-height:.9;font-weight:600">Ticket Booking</h3>
+      <p data-reveal="up" style="margin:0;font-size:clamp(18px,1.6vw,21px);line-height:1.5;font-weight:300;max-width:46ch">Stations, date, departure and platform arrive pre-filled from the plan. Person A adds a name and a number, and sees the total before she pays.</p>
+      <p data-reveal="up" style="margin:0;font-size:16px;line-height:1.6;color:#D5E3E4;max-width:52ch;"><span style="display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#CAFFA6;margin-bottom:8px;font-weight:500">Why I chose this</span><strong style="color:#FAF9F6">The decision:</strong> One screen, not a wizard. Splitting passenger details, OTP and payment into steps reads well at a desk, but this form is filled during a five-minute walk, every extra screen is a chance to lose the train.</p>
+      <p data-reveal="up" style="margin:0;font-size:16px;line-height:1.6;color:#D5E3E4;max-width:52ch">The e-ticket keeps platform, departure and status beside the QR, so nothing has to be remembered at the gate.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:18px clamp(12px,2vw,28px);justify-content:center;align-items:flex-start">
+      <div data-reveal="up" style="width:min(46%,280px)"><img src="images/screens/ticket-1.webp" alt="Ticket Booking — one-screen form" data-lightbox data-caption="Ticket Booking — one screen, not a wizard" loading="lazy" style="display:block;width:100%;height:auto;filter:drop-shadow(0 16px 20px rgba(0,0,0,.3))"></div>
+      <div style="width:min(46%,280px);margin-top:clamp(40px,8vw,120px)"><div><div data-reveal="up" data-delay="120"><img src="images/screens/ticket-2.webp" alt="Ticket Booking — e-ticket" data-lightbox data-caption="Ticket Booking — the e-ticket" loading="lazy" style="display:block;width:100%;height:auto;filter:drop-shadow(0 16px 20px rgba(0,0,0,.3))"></div></div></div>
+      <p style="flex-basis:100%;margin:0;font-size:13px;line-height:1.5;color:#B7CDD2;max-width:44ch">Ticket booking — one screen, not a wizard.</p>
+    </div>
+  </article>
+
+  <article id="o4" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,96px);align-items:center;scroll-margin-top:80px">
+    <div style="display:flex;flex-wrap:wrap;gap:18px clamp(12px,2vw,28px);justify-content:center;align-items:flex-start">
+      <div data-reveal="up" style="width:min(46%,280px)"><img src="images/screens/track-1.webp" alt="Live Tracking — stops remaining" data-lightbox data-caption="Live Tracking — 2 out of 8 stops remaining" loading="lazy" style="display:block;width:100%;height:auto;filter:drop-shadow(0 16px 20px rgba(0,0,0,.3))"></div>
+      <div style="width:min(46%,280px);margin-top:clamp(40px,8vw,120px)"><div><div data-reveal="up" data-delay="120"><img src="images/screens/track-2.webp" alt="Live Tracking — journey over" data-lightbox data-caption="Live Tracking — journey summary" loading="lazy" style="display:block;width:100%;height:auto;filter:drop-shadow(0 16px 20px rgba(0,0,0,.3))"></div></div></div>
+      <p style="flex-basis:100%;margin:0;font-size:13px;line-height:1.5;color:#B7CDD2;max-width:44ch">Live tracking — stops remaining is the headline number, not ETA.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span data-reveal="fade" style="font-size:12px;letter-spacing:.24em;color:#CAFFA6;font-weight:500">EDGE 04 — THE LAST MILE</span>
+      <h3 data-reveal="up" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(56px,7vw,110px);line-height:.9;font-weight:600">Live Tracking</h3>
+      <p data-reveal="up" style="margin:0;font-size:clamp(18px,1.6vw,21px);line-height:1.5;font-weight:300;max-width:46ch">On the Aqua Line, Person A sees where she is in the sequence and can book the auto that will be waiting at Wakad before they stands up.</p>
+      <p data-reveal="up" style="margin:0;font-size:16px;line-height:1.6;color:#D5E3E4;max-width:52ch;"><span style="display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#CAFFA6;margin-bottom:8px;font-weight:500">Why I chose this</span><strong style="color:#FAF9F6">The decision:</strong> Stops remaining is the headline number, not ETA. On a line you have never ridden the question is not when, it is which stop is mine and a count of two out of eight answers it without reading the list.</p>
+      <p data-reveal="up" style="margin:0;font-size:16px;line-height:1.6;color:#D5E3E4;max-width:52ch">The journey closes on a summary that leads with the exit-scan reminder, because the QR is needed at both gates.</p>
+    </div>
+  </article>
+  <div data-reveal="up" style="display:flex;justify-content:flex-start;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(250,249,246,.25);padding-top:24px">
+    <a href="https://www.figma.com/design/j2BpeOTdqcx6TyArn5iC2s/Pune-Journey-Planner?node-id=163-187&amp;t=lekYhJzJwhXjEdTZ-1" target="_blank" rel="noopener noreferrer" data-ext data-hover-root style="display:flex;align-items:center;gap:14px;width:max-content;padding:6px 6px 6px 24px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(32,70,84,.14);font-size:18px;font-weight:600;color:#204654;white-space:nowrap;text-decoration:none">View full project<span data-hover="transform:rotate(-45deg)" style="width:44px;height:44px;border-radius:50%;background:#2F7A45;color:#FAF9F6;display:flex;align-items:center;justify-content:center;line-height:1;transition:transform .3s cubic-bezier(.2,.7,.2,1)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+  </div>
+</section>
+
+<!-- 10 REFLECTION -->
+<section id="reflection" data-screen-label="Reflection" style="position:relative;padding:clamp(68px,9vw,120px) clamp(16px,4vw,48px) clamp(68px,9vw,120px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(32px,5vw,80px);align-items:start">
+  <div style="grid-column:1/-1;display:flex;align-items:center;gap:14px;margin-bottom:clamp(28px,4vw,52px);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#4C6873"><span style="color:#2A6B3D">10</span><span style="width:40px;height:1px;background:currentColor"></span><span>Reflection</span></div>
+  <h2 data-reveal="up" style="margin:0;font-size:clamp(40px,5vw,76px);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;letter-spacing:-.025em;line-height:1.02">What this project changed for me.</h2>
+  <p data-reveal="up" data-delay="120" style="margin:0;font-size:clamp(19px,1.8vw,25px);line-height:1.5;font-weight:300;max-width:40ch;text-wrap:pretty">What surprised me was how little of the problem sat inside the metro. Almost every frustration people described happened before they reached a platform or after they left one and none of it was visible in the app that was supposed to help.</p>
+</section>
+
+<a href="expense.html" data-transition data-hover-root data-cursor="Next project" style="display:flex;flex-direction:column;gap:14px;background:#204654;color:#FAF9F6;padding:clamp(45px,6.8vw,90px) clamp(16px,4vw,48px)">
+  <span style="font-size:12px;letter-spacing:.24em;color:#B7CDD2">NEXT PROJECT — 02</span>
+  <span data-hover="transform:translateX(24px);color:#CAFFA6" style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(48px,7.4vw,120px);line-height:.92;transition:transform .7s cubic-bezier(.2,.7,.2,1),color .4s;font-weight:600">Employee Expense Reimbursement →</span>
+  <span style="font-size:15px;color:#B7CDD2">Design Strategy · Designing for B2B · Team project</span>
+</a>
+<footer style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px clamp(16px,4vw,48px);font-size:13px;color:#4C6873">
+  <span>© 2026 Heeya Kapadia</span>
+  <a href="#intro" style-hover="color:#2F7A45">Back to top ↑</a>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const STEPS = [
+  { time: '8:45', tag: 'Plan', title: 'Enter where she’s going', body: 'Savannah to Tea Villa Café, leaving now.', img: 'images/screens/route-1.webp' },
+  { time: '8:45', tag: 'Choose', title: 'Compare three routes', body: 'Walk + Metro + Auto, 43 min, ₹60 — ₹120 less than a cab.', img: 'images/screens/route-2.webp' },
+  { time: '8:45', tag: 'Walk', title: '400 m to Shivajinagar', body: 'The ticket is bought during the walk, not in a queue.', img: 'images/screens/nav-1.webp' },
+  { time: '8:50', tag: 'Ride', title: 'Aqua Line, 8 stops', body: 'A live count of stops remaining, so she never has to guess.', img: 'images/screens/track-1.webp' },
+  { time: '9:15', tag: 'Arrive', title: 'Auto outside Gate B', body: 'Booked before she got off the train. 9:30, on time.', img: 'images/screens/track-2.webp' }
+];
+const QUOTE = '“People don’t distrust the metro. They distrust the edges of the journey”.'.split(' ');
+
+class Component extends DCLogic {
+  state = { step: 0, open: 2 };
+  componentDidMount() {
+    const go = () => window.Site ? window.Site.init() : setTimeout(go, 40); go();
+    this.onScroll = () => { if (this.raf) return; this.raf = requestAnimationFrame(() => { this.raf = 0; this.tick(); }); };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    addEventListener('resize', this.onScroll);
+    setTimeout(() => this.tick(), 60);
+  }
+  componentWillUnmount() { removeEventListener('scroll', this.onScroll); removeEventListener('resize', this.onScroll); }
+  prog(id) {
+    const el = document.getElementById(id); if (!el) return 0;
+    const r = el.getBoundingClientRect(), d = r.height - innerHeight;
+    return d <= 0 ? 0 : Math.min(1, Math.max(0, -r.top / d));
+  }
+  tick() {
+    const n = STEPS.length, p = this.prog('flow');
+    const step = Math.min(n - 1, Math.floor(p * n));
+    if (step !== this.state.step) this.setState({ step });
+    const frac = Math.min(1, Math.max(0, p * n - step));
+    const A = [0, 0, 0, 5 / 43, 30 / 43], B = [0, 0, 5 / 43, 30 / 43, 1];
+    const x = (A[step] + (B[step] - A[step]) * frac) * 100 + '%';
+    const dot = document.getElementById('flow-dot'), fill = document.getElementById('flow-fill');
+    if (dot) dot.style.left = x; if (fill) fill.style.width = x;
+    const q = this.prog('insight'), rm = window.Site && window.Site.reducedMotion;
+    const words = document.querySelectorAll('[data-w]'), m = words.length;
+    words.forEach((w, i) => { const t = rm ? 1 : Math.min(1, Math.max(0, q * 1.35 * m - i)); w.style.opacity = (0.18 + 0.82 * t).toFixed(3); });
+    const sub = document.getElementById('insight-sub');
+    if (sub) { const on = rm || q > 0.78; sub.style.opacity = on ? 1 : 0; sub.style.transform = on ? 'none' : 'translateY(20px)'; }
+  }
+  goStep(i) {
+    const el = document.getElementById('flow'); if (!el) return;
+    const top = el.getBoundingClientRect().top + scrollY, d = el.offsetHeight - innerHeight;
+    scrollTo({ top: top + d * ((i + 0.35) / STEPS.length), behavior: 'smooth' });
+  }
+  renderVals() {
+    const { step, open } = this.state;
+    const toggle = i => () => this.setState(s => ({ open: s.open === i ? 0 : i }));
+    const emph = new Set(['edges', 'of', 'the', 'journey”.']);
+    return {
+      stepNo: '0' + (step + 1),
+      steps: STEPS.map((s, i) => ({
+        ...s,
+        op: i === step ? 1 : i < step ? .55 : .35,
+        bar: i === step ? '#2F7A45' : i < step ? '#204654' : '#DFDED8',
+        maxH: i === step ? '80px' : '0px',
+        imgOp: i === step ? 1 : 0,
+        imgTf: i === step ? 'translateY(0) scale(1)' : i < step ? 'translateY(-24px) scale(.96)' : 'translateY(32px) scale(.96)',
+        pe: i === step ? 'auto' : 'none',
+        go: () => this.goStep(i)
+      })),
+      insightWords: QUOTE.map((t, i) => ({ t, c: i >= 9 && emph.has(t) ? '#CAFFA6' : '#FAF9F6' })),
+      open1: open === 1, open2: open === 2, open3: open === 3,
+      t1: toggle(1), t2: toggle(2), t3: toggle(3),
+      lbl1: open === 1 ? 'Close ↑' : 'Why not ↓', lbl2: open === 2 ? 'Close ↑' : 'Why this one ↓', lbl3: open === 3 ? 'Close ↑' : 'Why not ↓',
+      cur1: open === 1 ? 'Close' : 'Read why', cur2: open === 2 ? 'Close' : 'Read why', cur3: open === 3 ? 'Close' : 'Read why'
+    };
+  }
+}
+</script>
+</body>
+</html>
